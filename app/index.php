@@ -3,7 +3,7 @@ try {
   // DBに接続する
   $dbh = new PDO('mysql:host=mysql;dbname=test', 'root', 'password');
 
-  // ここでクエリ実行する
+  // ここにクエリを書く
   // queryメソッド(SELECT)
   $query_result = $dbh->query('SELECT * FROM test_comments');
   // prepareメソッド(INSERT)
