@@ -1,7 +1,10 @@
 <?php
 try {
   // DBに接続する
-  $dbh = new PDO('mysql:host=mysql;dbname=test', 'root', 'password');
+  $dsn = 'pgsql:dbname=test;host=skillup-php-step1_pgsql_1;port=5432';
+  $user = 'postgres';
+  $pass = 'example';
+  $dbh = new PDO($dsn, $user, $pass);
 
   // ここにクエリを書く
   // queryメソッド(SELECT)
