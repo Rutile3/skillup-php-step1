@@ -1,4 +1,3 @@
-<?php echo '<p>PHP画面</p>'; ?>
 <?php
 $dsn = 'pgsql:dbname=TEST;host=pgsql;port=5432';
 $user = 'postgres';
@@ -8,7 +7,7 @@ try {
 
     // ここにクエリを書く
     // queryメソッド(SELECT)
-    $query_result = $dbh->query('SELECT * FROM public.test_comments');
+    $query_result = $dbh->query('SELECT * FROM test_comments');
     // prepareメソッド(INSERT)
     $sth = $dbh->prepare('INSERT INTO test_comments (name, text) VALUES (?, ?)');
     // prepareメソッド(SELECT)
